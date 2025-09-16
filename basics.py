@@ -1,34 +1,65 @@
-#Declaração de variáveis
+# #Declaração de variáveis
 
-idade = 17
-nome = "José"
-altura = 1,70
-estudante = True
+# idade = 17
+# nome = "José"
+# altura = 1,70
+# estudante = True
 
-#Operadores aritméticos
+# #Operadores aritméticos
 
-print(idade + 1)
-print(idade - 1)
-print(idade / 2)
-print(idade * 2)
+# print(idade + 1)
+# print(idade - 1)
+# print(idade / 2)
+# print(idade * 2)
 
-#Operadores de comparação
-print(idade > 18)
-print(idade == 18)
-print(idade != 18)
-print(idade <= 18)
-print(idade >= 18)
-print(idade >= 18 and estudante)
-print(idade >= 18 or estudante)
-print(not estudante)
+# #Operadores de comparação
+# print(idade > 18)
+# print(idade == 18)
+# print(idade != 18)
+# print(idade <= 18)
+# print(idade >= 18)
+# print(idade >= 18 and estudante)
+# print(idade >= 18 or estudante)
+# print(not estudante)
 
-#Instruções condicionais
+# #Instruções condicionais
 
-idade = int(input("Qual a tua idade? "))
+# idade = int(input("Qual a tua idade? "))
 
-if idade < 18:
-    print("Menor de idade")
-elif idade > 18:
-    print("Maior de idade")
-else:
-    print("Acabaste de fazer 18")
+# if idade < 18:
+#     print("Menor de idade")
+# elif idade > 18:
+#     print("Maior de idade")
+# else:
+#     print("Acabaste de fazer 18")
+
+# #Laços de repetição (cíclos)
+
+# for i in range(2, 10, 2):
+#     print("Loop", i)
+
+# i = 0
+# while i<10:
+#     print("Repetição", i)
+#     i += 1
+
+# #do while não existe em Python
+
+#Funções (Programação Funcional)
+
+def repetir(x):
+    i = 0
+    while i <= 10:
+        print("Loop", i)
+        i += x
+    return i
+
+def repetirV(vezes, x):
+    i = 0
+    while i <= vezes:
+        print("Loop", i, "de", vezes)
+        i += x
+    return
+
+# repetir(2)
+repetirV(10,5)
