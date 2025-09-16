@@ -60,6 +60,12 @@ def repetirV(vezes, x):
         print("Loop", i, "de", vezes)
         i += x
     return
+#Funções com retorno
+def somar(a,b):
+    return a + b
+resultado = somar(5,3)
+# print(resultado)
 
 # repetir(2)
-repetirV(10,5)
+# repetirV(10,5)
+
