@@ -16,7 +16,7 @@ if booleano in respostas_true:
     else:
         print("Estás a mentir")
 elif booleano in respostas_false:
-    if idade - int(ano) < 18:
+    if idade < 18:
         print("És menor de idade")
     else:
         print("Estás a mentir")
