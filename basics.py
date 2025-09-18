@@ -74,7 +74,26 @@ resultado = somar(5,3)
 #Bibliotecas
 import math
 
-raiz = math.sqrt(16)
+# raiz = math.sqrt(16)
 print("Raiz quadrada de 16 é", raiz)
-potencia = math.pow(2, 5)
+# potencia = math.pow(2, 5)
 print("2^3 é", potencia)
+
+"""
+Comentário multi linha
+exemplo
+"""
+
+x = 5
+y = int(5) 
+# ou y:int=5
+
+"""
+int() faz o casting durante a interpretação
+:int é declarada como inteiro
+"""
+
+a, b, c = 1, 2, 3
+
+lista = ["Item 1", "Item 2", "Item 3"]
+print(lista[0])
