@@ -1,19 +1,22 @@
-compras = ["pão", "leite", "maçãs"]
+def funcao():
+    compras = []
 
-cancelar = ["cancel", "exit", "cancelar", "sair"]
+    cancelar = ["cancel", "exit", "cancelar", "sair"]
 
-while True:
-    a = input("O que deseja comprar? ")
-    if a.lower() in cancelar:
-        break
-    elif a:
-        if a.lower() in compras:
-            print(f"{a} já está na lista")
-        else:
-            compras.append(a)
+    while True:
+        a = input("O que deseja comprar? ")
+        if a.lower() in cancelar:
+            break
+        elif a:
+            if a.lower() in compras:
+                print(f"{a} já está na lista")
+            else:
+                compras.append(a)
 
-b = ", ".join(compras)
-num = len(compras)
+    b = ", ".join(compras)
+    num = len(compras)
 
-print(f"Aqui está a lista de compras, tem {num} items: ")
-print(b)
+    print(f"Aqui está a lista de compras, tem {num} items: ")
+    print(b)
+
+funcao()
