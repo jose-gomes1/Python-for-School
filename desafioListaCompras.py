@@ -1,7 +1,17 @@
 compras = ["pão", "leite", "maçãs"]
 
-a = input("O que deseja comprar? ")
-compras.append(a)
+cancelar = ["cancel", "exit", "cancelar", "sair"]
+
+while True:
+    a = input("O que deseja comprar? ")
+    if a.lower() in cancelar:
+        break
+    elif a:
+        if a.lower() in compras:
+            print(f"{a} já está na lista")
+        else:
+            compras.append(a)
+
 b = ", ".join(compras)
 num = len(compras)
 
