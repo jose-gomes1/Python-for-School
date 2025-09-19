@@ -19,4 +19,8 @@ def funcao():
     print(f"Aqui está a lista de compras, tem {num} items: ")
     print(b)
 
-funcao()
+def main():
+    funcao()
+
+if __name__ == "__main__":
+    main()
