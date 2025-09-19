@@ -11,7 +11,7 @@ def funcao():
             if a.lower() in compras:
                 print(f"{a} já está na lista")
             else:
-                compras.append(a)
+                compras.append(a.lower())
 
     b = ", ".join(compras)
     num = len(compras)
