@@ -68,4 +68,3 @@ def ex4():
     for fruta in lista:
         if fruta == "banana":
             break
-

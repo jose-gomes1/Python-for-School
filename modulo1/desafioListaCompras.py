@@ -51,8 +51,14 @@ def dictionary():
     for key in myDictionary:
         print(f"{key}:", myDictionary[key])
 
+# funcoes lambda
+def lam():
+    x = lambda a : a + 10
+    print(x(5))
+
+
 def switch():
-    x = int(input("Digite um numero entre 1 a 5"))
+    x = int(input("Digite um numero entre 1 a 6: "))
     match x:
         case 1:
             funcao()
@@ -64,5 +70,9 @@ def switch():
             sets()
         case 5:
             dictionary()
+        case 6:
+            lam()
         case _:
             print("Inválido")
+
+switch()
