@@ -112,7 +112,7 @@ def ex8():
         dados = resposta.json() # pega a resposta, converte para json e aplica o json em um dicionario
 
         print(f"\nNome: {dados['name'].title()}")
-        print(f"Pokedex {dados['id']}")
+        print(f"Pokedex: {dados['id']}")
         print("Tipos:")
         for tipo in dados['types']: # pokemons podem ter dois tipos, por isso um ciclo for
             print(f" - {tipo['type']['name'].title()}")
