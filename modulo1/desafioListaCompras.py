@@ -44,10 +44,11 @@ def sets():
 
 def dictionary():
     myDictionary = {
-        "brand": "Ford",
-        "model": "Mustang",
-        "year": 1964
+        "Brand": "Ford",
+        "Model": "Mustang",
+        "Year": 1964
     }
-    print(myDictionary["model"])
+    for key in myDictionary:
+        print(f"{key}:", myDictionary[key])
 
 dictionary()
