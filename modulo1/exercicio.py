@@ -60,4 +60,3 @@ def ex3():
         print(f"F({i}) = {a}")
         a, b = b, a + b
 
-ex3()

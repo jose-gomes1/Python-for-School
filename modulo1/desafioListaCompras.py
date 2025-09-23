@@ -19,8 +19,21 @@ def funcao():
     print(f"Aqui está a lista de compras, tem {num} items: ")
     print(b)
 
-def main():
-    funcao()
+# listas
+def listas():
+    frutas = ["maçã", "banana", "laranja"]
+    frutasN = frutas.copy()
+    print(frutas)
+    print(frutasN)
 
-if __name__ == "__main__":
-    main()
+# tuples
+def tuples():
+    carros = ("BMW", "Audi", "Mercedes")
+    (marca1, marca2, marca3) = carros # unpacking: relaciona valores com chaves
+    print(marca1)
+    marca2 = "Fiat"
+    print(marca2)
+    print(carros[1])
+
+
+tuples()
