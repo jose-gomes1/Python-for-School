@@ -51,4 +51,18 @@ def dictionary():
     for key in myDictionary:
         print(f"{key}:", myDictionary[key])
 
-dictionary()
+def switch():
+    x = int(input("Digite um numero entre 1 a 5"))
+    match x:
+        case 1:
+            funcao()
+        case 2:
+            listas()
+        case 3:
+            tuples()
+        case 4:
+            sets()
+        case 5:
+            dictionary()
+        case _:
+            print("Inválido")
