@@ -60,3 +60,12 @@ def ex3():
         print(f"F({i}) = {a}")
         a, b = b, a + b
 
+
+# Numero 4:
+def ex4():
+    lista = ["maçã", "banana", "laranja"]
+
+    for fruta in lista:
+        if fruta == "banana":
+            break
+
