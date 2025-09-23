@@ -1,5 +1,7 @@
 # Sugerido pelo Professor
 
+import requests
+
 # Numero 1:
 """
 Implementa, em Python, um programa que faça o seguinte:
@@ -68,3 +70,63 @@ def ex4():
     for fruta in lista:
         if fruta == "banana":
             break
+
+# Numero 5:
+"""
+Fazer uma função lamda para o cubo de um numero
+"""
+def ex5():
+    lFunc = lambda a : a*a*a
+    print("Escolha um número: ")
+    a = input()
+    lFunc(a)
+
+def ex6():
+    lFuncEx6 = lambda : [print(i) for i in range(11)]
+    lFuncEx6()
+
+def ex7():
+    myDict = {
+        "Key1": "Val1",
+        "Key2": "Val2",
+        "Key3": "Val3"}
+    
+    for key in myDict:
+        print(f"{key}:", myDict[key])
+
+# Exercicio 8
+"""
+App que consulta uma API pública e mostra os dados
+"""
+
+def ex8():
+    print("=== Consulta de Pokémon ===")
+    nome = input("Digite o nome de um Pokémon: ").lower()
+
+    url = f"https://pokeapi.co/api/v2/pokemon/{nome}"
+
+    try:
+        resposta = requests.get(url)
+        resposta.raise_for_status()  # lança um erro de status no caso de erro
+
+        dados = resposta.json() # pega a resposta, converte para json e aplica o json em um dicionario
+
+        print(f"\nNome: {dados['name'].title()}")
+        print(f"Pokedex {dados['id']}")
+        print("Tipos:")
+        for tipo in dados['types']: # pokemons podem ter dois tipos, por isso um ciclo for
+            print(f" - {tipo['type']['name'].title()}")
+
+        print("Habilidades:")
+        for habilidade in dados['abilities']: # pokemons podem ter varias habilidades tambem
+            print(f" - {habilidade['ability']['name'].replace('-', ' ').title()}")
+
+        print(f"Altura: {dados['height'] / 10:.1f} m") # divisao por 10 para a conversão a metros e quilos
+        print(f"Peso: {dados['weight'] / 10:.1f} kg")
+
+    except requests.exceptions.HTTPError: # no caso do HTTP nao existir
+        print("Pokémon não encontrado. Verifique o nome digitado.")
+    except requests.exceptions.RequestException as e: # no caso da API não poder ser acessada
+        print(f"Erro ao acessar a API: {e}")
+            
+ex8()
