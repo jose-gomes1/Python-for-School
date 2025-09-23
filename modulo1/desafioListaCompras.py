@@ -56,6 +56,8 @@ def lam():
 # nome  lam  param equação
     x = lambda a : a + 10
     print(x(5))
+    lFunc2 = lambda : print("Olá")
+    lFunc2()
 
 
 def switch():
