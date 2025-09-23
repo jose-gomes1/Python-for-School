@@ -53,6 +53,7 @@ def dictionary():
 
 # funcoes lambda
 def lam():
+# nome  lam  param equação
     x = lambda a : a + 10
     print(x(5))
 
