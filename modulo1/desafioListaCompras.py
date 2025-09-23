@@ -35,5 +35,19 @@ def tuples():
     print(marca2)
     print(carros[1])
 
+# sets
+def sets():
+    oMeuSet = {"maçã", "banana", "laranja"} # não pode ser alterado, frozenset() nem pode adicionar ou remover
+    oMeuSet.add("uva")
+    for set in oMeuSet:
+        print(set)
 
-tuples()
+def dictionary():
+    myDictionary = {
+        "brand": "Ford",
+        "model": "Mustang",
+        "year": 1964
+    }
+    print(myDictionary["model"])
+
+dictionary()
