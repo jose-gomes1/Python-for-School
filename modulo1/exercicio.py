@@ -17,13 +17,13 @@ def ex1():
 
 # Numero 2:
 """
-Dado uma lista, elabora um programa que permita com um ciclo, inserir elementos na lista até que a tecla 'q' seja precionada
+Dado uma lista, elabora um programa que permita com um ciclo, inserir elementos na lista até que a tecla "q" seja precionada
 """
 
 def ex2():
     while True:
-            a = input("O que deseja comprar? ('q' para sair) ")
-            if a.lower() == 'q':
+            a = input("O que deseja comprar? ("q" para sair) ")
+            if a.lower() == "q":
                 print("Esta é a tua lista: ")
                 for i in lista:
                     b = ", ".join(lista)
@@ -111,30 +111,34 @@ def ex8():
 
         dados = resposta.json() # pega a resposta, converte para json e aplica o json em um dicionario
 
-        print(f"\nNome: {dados['name'].title()}")
-        print(f"Pokedex: {dados['id']}")
+        print(f"\nNome: {dados["name"].title()}")
+        print(f"Pokedex: {dados["id"]}")
         print("Tipos:")
-        for tipo in dados['types']: # pokemons podem ter dois tipos, por isso um ciclo for
-            print(f" - {tipo['type']['name'].title()}")
+        for tipo in dados["types"]: # pokemons podem ter dois tipos, por isso um ciclo for
+            print(f" - {tipo["type"]["name"].title()}")
 
         print("Habilidades:")
-        for habilidade in dados['abilities']: # pokemons podem ter varias habilidades tambem
-            print(f" - {habilidade['ability']['name'].replace('-', ' ').title()}")
+        for habilidade in dados["abilities"]: # pokemons podem ter varias habilidades tambem
+            print(f" - {habilidade["ability"]["name"].replace("-", " ").title()}")
 
         print("\nStats:")
         for stats in dados["stats"]: # o ciclo for percorre o "stats", que é dividido entre vários "stat", pegando o nome (hp, defense, etc) e o seu valor (base_stat)
-            print(f"{stats['stat']['name'].replace('-', ' ').title()}: {stats['base_stat']}")
+            print(f"{stats["stat"]["name"].replace("-", " ").title()}: {stats["base_stat"]}")
         total_base_stat = 0
         for bst in dados["stats"]: # o ciclo percorre o "stats" incrementando o valor de cada "stat" a total_base_set
             total_base_stat += bst["base_stat"]
         print(f"Base Stat Total: {total_base_stat}")
 
-        print(f"\nAltura: {dados['height'] / 10:.1f} m") # divisao por 10 para a conversão a metros e quilos
-        print(f"Peso: {dados['weight'] / 10:.1f} kg")
+        print(f"\nAltura: {dados["height"] / 10:.1f} m") # divisao por 10 para a conversão a metros e quilos
+        print(f"Peso: {dados["weight"] / 10:.1f} kg")
 
     except requests.exceptions.HTTPError: # no caso do HTTP nao existir
         print("Pokémon não encontrado. Verifique o nome digitado.")
     except requests.exceptions.RequestException as e: # no caso da API não poder ser acessada
         print(f"Erro ao acessar a API: {e}")
+
+def main():
+    ex8()
             
-ex8()
+if __name__ == "__main__":
+    main()
