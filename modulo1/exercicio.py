@@ -22,7 +22,7 @@ Dado uma lista, elabora um programa que permita com um ciclo, inserir elementos 
 
 def ex2():
     while True:
-            a = input("O que deseja comprar? ("q" para sair) ")
+            a = input("O que deseja comprar? ('q' para sair) ")
             if a.lower() == "q":
                 print("Esta é a tua lista: ")
                 for i in lista:
