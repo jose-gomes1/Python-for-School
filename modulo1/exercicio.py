@@ -113,11 +113,11 @@ def ex8():
 
         print(f"\nNome: {dados["name"].title()}")
         print(f"Pokedex: {dados["id"]}")
-        print("Tipos:")
+        print("\nTipos:")
         for tipo in dados["types"]: # pokemons podem ter dois tipos, por isso um ciclo for
             print(f" - {tipo["type"]["name"].title()}")
 
-        print("Habilidades:")
+        print("\nHabilidades:")
         for habilidade in dados["abilities"]: # pokemons podem ter varias habilidades tambem
             print(f" - {habilidade["ability"]["name"].replace("-", " ").title()}")
 
