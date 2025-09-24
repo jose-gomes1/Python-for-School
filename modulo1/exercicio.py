@@ -139,6 +139,6 @@ def ex8():
 
 def main():
     ex8()
-            
+
 if __name__ == "__main__":
     main()
