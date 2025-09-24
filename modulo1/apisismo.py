@@ -19,25 +19,27 @@ try:
     dados_sismos = resposta.json()
 
     eventos = dados_sismos.get("data", [])
-
+    print("Estes foram os 3 últimos sismos:")
     if eventos:
-        for evento in eventos[:10]:
+        # Pega apenas os 3 últimos eventos
+        ultimos_eventos = eventos[-3:]
+
+        for evento in ultimos_eventos:
             # Pega a data original
-            data_iso = evento.get("time", None)
+            data_iso = evento.get("time", [])
             if data_iso:
                 try:
-                    data_formatada = datetime.fromisoformat(data_iso).strftime("%d/%m/%Y %H:%M:%S")
+                    data_formatada = datetime.fromisoformat(data_iso).strftime("%d/%m/%Y %H:%M")
                 except ValueError:
                     data_formatada = data_iso  # se falhar, mostra como veio
             else:
                 data_formatada = "N/A"
 
             print(
-                f"Sismo de magnitude {evento.get("magnitud", "N/A")} "
+                f"- Sismo de magnitude {evento.get('magnitud', 'N/A')} "
                 f"na data {data_formatada} "
-                f"com latitude de {evento.get("lat", "N/A")}, longitude {evento.get("lon", "N/A")} "
-                f"e profundidade de {evento.get("depth", "N/A")} km "
-                f"em {evento.get("obsRegion", "N/A")}"
+                f"e profundidade de {evento.get('depth', 'N/A')} km "
+                f"em {evento.get('obsRegion', 'N/A')}"
             )
     else:
         print("Nenhum sismo encontrado.")
