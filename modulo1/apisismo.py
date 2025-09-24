@@ -38,7 +38,7 @@ def main():
 
                 print(
                     f"- Sismo de magnitude {evento.get('magnitud', 'N/A')} "
-                    f"na data {data_formatada} "
+                    f"a {data_formatada} "
                     f"e profundidade de {evento.get('depth', 'N/A')} km "
                     f"em {evento.get('obsRegion', 'N/A')}"
                 )
