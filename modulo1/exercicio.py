@@ -121,7 +121,15 @@ def ex8():
         for habilidade in dados['abilities']: # pokemons podem ter varias habilidades tambem
             print(f" - {habilidade['ability']['name'].replace('-', ' ').title()}")
 
-        print(f"Altura: {dados['height'] / 10:.1f} m") # divisao por 10 para a conversão a metros e quilos
+        print("\nStats:")
+        for stats in dados["stats"]: # o ciclo for percorre o "stats", que é dividido entre vários "stat", pegando o nome (hp, defense, etc) e o seu valor (base_stat)
+            print(f"{stats['stat']['name'].replace('-', ' ').title()}: {stats['base_stat']}")
+        total_base_stat = 0
+        for bst in dados["stats"]: # o ciclo percorre o "stats" incrementando o valor de cada "stat" a total_base_set
+            total_base_stat += bst["base_stat"]
+        print(f"Base Stat Total: {total_base_stat}")
+
+        print(f"\nAltura: {dados['height'] / 10:.1f} m") # divisao por 10 para a conversão a metros e quilos
         print(f"Peso: {dados['weight'] / 10:.1f} kg")
 
     except requests.exceptions.HTTPError: # no caso do HTTP nao existir
