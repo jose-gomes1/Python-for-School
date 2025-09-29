@@ -3,7 +3,7 @@ import random
 random.seed()
 
 a = 0
-bingoNums = list(range(0, 101))
+bingoNums = list(range(1, 101))
 
 while a != "q":
     if not bingoNums:
