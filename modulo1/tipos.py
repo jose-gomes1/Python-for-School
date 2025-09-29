@@ -69,9 +69,9 @@ def uniao(set, setset):
 # exercício 5
 """
 Programa que aceita uma lista em matriz no formato:
-1 2 3
-4 5 6
-7 8 9
+[1 2 3]
+[4 5 6]
+[7 8 9]
 e apresente a lista no ecrã como está indicada acima
 """
 
@@ -81,8 +81,9 @@ matrix = [[1, 2, 3],
 
 def matriz(mat):
     for row in mat:
+        print("[", end=" ")
         for item in row:
             print(item, end=" ")
-        print()
+        print("]")
 
 matriz(matrix)
