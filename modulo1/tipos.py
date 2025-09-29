@@ -50,4 +50,39 @@ def funcDictionary(dict):
     for key in dict:
         print(f"{key}:",dict[key])
     
-funcDictionary(myDictionary)
+# funcDictionary(myDictionary)
+
+# exercício 4
+"""
+Programa com uma função que aceita como parâmetros 2 sets e devolve a sua união
+"""
+
+set1 = {"set1-1", "set1-2", "set1-3"}
+set2 = {"set2-1", "set2-2", "set2-3"}
+
+def uniao(set, setset):
+    s = set.union(setset)
+    print(s)
+
+# uniao(set1, set2)
+
+# exercício 5
+"""
+Programa que aceita uma lista em matriz no formato:
+1 2 3
+4 5 6
+7 8 9
+e apresente a lista no ecrã como está indicada acima
+"""
+
+matrix = [[1, 2, 3],
+          [4, 5, 6],
+          [7, 8, 9]]
+
+def matriz(mat):
+    for row in mat:
+        for item in row:
+            print(item, end=" ")
+        print()
+
+matriz(matrix)
