@@ -8,6 +8,7 @@ bingoNums = list(range(1, 101))
 while a != "q":
     if not bingoNums:
         print("Acabaram os números")
+        print("B I N G O !")
         break
 
     chosen = random.choice(bingoNums)
