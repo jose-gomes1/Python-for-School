@@ -15,7 +15,7 @@ meuTuplet = ("val1", "val2", "val3", "val4")
 
 def funcTuplet(tuplet):
     for i in tuplet:
-        b = ", ".join(tuplet)
-    print(b)
+        i = ", ".join(tuplet)
+    print(i)
     
 funcTuplet(meuTuplet)
