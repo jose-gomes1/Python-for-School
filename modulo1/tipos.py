@@ -5,3 +5,8 @@
 
 # funções lambda
 # funções anónimas de baixa complexidade
+
+# exercício:
+"""
+
+"""
