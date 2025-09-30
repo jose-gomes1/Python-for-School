@@ -1,23 +1,22 @@
 import random
 
-random.seed()
-
 bingoNums = list(range(1, 101))
-numSort = []
+numSort = set()
 
 def generatorFunction():
     a = 0
+    random.shuffle(bingoNums)
     while a != "q":
         if not bingoNums:
             print("Acabaram os números")
             print("B I N G O !")
             break
 
-        chosen = random.choice(bingoNums)
-        bingoNums.remove(chosen)
-        numSort.append(chosen)
+        print("Números sorteados:")
+        chosen = bingoNums.pop()
+        numSort.add(chosen)
         n = ", ".join(map(str, numSort))
-        print("Números sorteados:", n)
+        print(n)
 
         a = input("Prima qualquer tecla para continuar ('q' para sair) ").lower()
 
