@@ -8,7 +8,7 @@ setA = set({1, 2, 3, 4, 5})
 
 def funcSets(oMeuSet):
     setB = set()
-    for i in oMeuSet.copy():
+    for i in range(len(oMeuSet)):
         valSet = oMeuSet.pop()
         setB.add(valSet)
 
