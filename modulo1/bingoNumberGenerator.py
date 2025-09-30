@@ -16,7 +16,8 @@ def generatorFunction():
         chosen = random.choice(bingoNums)
         bingoNums.remove(chosen)
         numSort.append(chosen)
-        print("Números sorteados:", numSort)
+        n = ", ".join(map(str, numSort))
+        print("Números sorteados:", n)
 
         a = input("Prima qualquer tecla para continuar ('q' para sair) ").lower()
 
