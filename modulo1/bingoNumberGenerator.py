@@ -3,6 +3,7 @@ import random
 random.seed()
 
 bingoNums = list(range(1, 101))
+numSort = []
 
 def generatorFunction():
     a = 0
@@ -14,7 +15,8 @@ def generatorFunction():
 
         chosen = random.choice(bingoNums)
         bingoNums.remove(chosen)
-        print("Número:",chosen)
+        numSort.append(chosen)
+        print("Números sorteados:", numSort)
 
         a = input("Prima qualquer tecla para continuar ('q' para sair) ").lower()
 
