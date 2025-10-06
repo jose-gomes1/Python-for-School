@@ -12,6 +12,7 @@ class Student(Person):
 
 
 p1 = Person("John", 36)
+p2 = Student("A", 18, 12)
 
 class Carro:
 
@@ -42,5 +43,4 @@ class Carro:
             self.velocidade = self.velocidadeMax
         print(f"Acelerando a {self.velocidade} km/h")
 
-p2 = Student("A", 18, 12)
 print(p2.name, p2.age, p2.year)
