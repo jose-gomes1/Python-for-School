@@ -5,6 +5,12 @@ class Person:
         self.name = name
         self.age = age
 
+class Student(Person):
+    def __init__(self, name, age, year):
+        super().__init__(name, age)
+        self.year = year
+
+
 p1 = Person("John", 36)
 
 class Carro:
@@ -36,6 +42,5 @@ class Carro:
             self.velocidade = self.velocidadeMax
         print(f"Acelerando a {self.velocidade} km/h")
 
-    
-c1 = Carro("Fiat", "500", 0)
-c1.acelerar(150)
+p2 = Student("A", 18, 12)
+print(p2.name, p2.age, p2.year)
