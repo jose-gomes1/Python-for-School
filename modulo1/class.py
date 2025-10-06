@@ -7,7 +7,7 @@ class Person:
 
 class Student(Person):
     def __init__(self, name, age, year):
-        Person.__init__(self, name, age)
+        super().__init__(name, age)
         self.year = year
 
 
