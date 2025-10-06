@@ -10,7 +10,6 @@ class Student(Person):
         super().__init__(name, age)
         self.year = year
 
-
 p1 = Person("John", 36)
 p2 = Student("A", 18, 12)
 
