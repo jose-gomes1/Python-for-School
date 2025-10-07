@@ -1,0 +1,20 @@
+Isolar o OS do projeto .py
+
+Manualmente:
+
+-> /na/pasta/ python3 -m venv PastaNova
+Virtualiza um ambiente para inicializar o ficheiro
+"É tipo um container, mas é uma pasta"
+
+Como se ativa o ambiente virtual?
+Na bin/, usar "source activate" (ou ./bin/activate)
+
+No VSCode:
+
+Criar pasta, code .
+Ctrl + Shift + P
+">Python create environmnent"
+venv, selecionar interpretador
+
+Desativar:
+Dentro do environmnent, escrever deactivate
